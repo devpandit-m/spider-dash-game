@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Shutter Portal</title>
+    <link rel="stylesheet" href="sty.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+</head>
+<body class="dark-mode">
+
+    <!-- Lamp Design -->
+    <div class="lamp-fixed-container">
+        <div class="lamp-base"></div>
+        <div class="lamp-arm"></div>
+        <div class="lamp-head">
+            <div class="bulb" id="bulb-glow"></div>
+            <div class="pull-chain" id="chain">
+                <div class="string"></div>
+                <div class="handle"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Shapes -->
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- Main Box -->
+    <div class="container-box">
+        <span class="line-1"></span>
+        <span class="line-2"></span>
+        <span class="line-3"></span>
+        <span class="line-4"></span>
+
+        <div class="shutter" id="shutter">
+            <p>PULL THE LAMP CORD</p>
+        </div>
+
+        <!-- Login Section -->
+        <div id="login-section" class="form-section active">
+            <form>
+                <h3 class="neon-h3">
+                    Login
+                    <span class="h-line-1"></span>
+                    <span class="h-line-2"></span>
+                    <span class="h-line-3"></span>
+                    <span class="h-line-4"></span>
+                </h3>
+                <label>Email</label>
+                <input type="text" id="login-user" placeholder="Enter Email">
+                <label>Password</label>
+                <div class="pass-wrapper">
+                    <input type="password" id="login-pass" placeholder="Password">
+                    <i class="fa-solid fa-eye toggle-eye" onclick="togglePass('login-pass', this)"></i>
+                </div>
+                <button type="button" class="btn-main" onclick="handleLogin()">Log In</button>
+                <div class="links-container">
+					<p class="toggle-text">
+						New user? <span onclick="showSection('signup-section')">Sign Up</span>
+					</p>
+					<p class="toggle-text">
+						<span onclick="showSection('reset-section')">Forgot Password?</span>
+					</p>
+				</div>
+            </form>
+        </div>
+
+        <!-- Register Section -->
+        <div id="signup-section" class="form-section">
+            <form id="signup-form">
+                <h3 class="neon-h3">
+                    Register
+                    <span class="h-line-1"></span>
+                    <span class="h-line-2"></span>
+                    <span class="h-line-3"></span>
+                    <span class="h-line-4"></span>
+                </h3>
+                <label>Full Name</label>
+                <input type="text" id="reg-name" placeholder="Your Name">
+                <label>Email</label>
+                <input type="email" id="reg-email" placeholder="Email ID">
+                <label>Password</label>
+                <div class="pass-wrapper">
+                    <input type="password" id="reg-pass" placeholder="Create Password">
+                    <i class="fa-solid fa-eye toggle-eye" onclick="togglePass('reg-pass', this)"></i>
+                </div>
+                <label>Confirm Password</label>
+                <div class="pass-wrapper">
+                    <input type="password" id="reg-conf" placeholder="Confirm Password">
+                    <i class="fa-solid fa-eye toggle-eye" onclick="togglePass('reg-conf', this)"></i>
+                </div>
+                <button type="button" class="btn-reg" onclick="handleRegister()">Register Now</button>
+                <p class="toggle-text"> <span onclick="showSection('login-section')">Back to Login</span></p>
+            </form>
+        </div>
+
+        <!-- Reset Section -->
+        <div id="reset-section" class="form-section">
+            <form>
+                <h3 class="neon-h3">
+                    Reset
+                    <span class="h-line-1"></span>
+                    <span class="h-line-2"></span>
+                    <span class="h-line-3"></span>
+                    <span class="h-line-4"></span>
+                </h3>
+                <label>Email</label>
+                <input type="email" id="reset-email" placeholder="Enter Email">
+                <button type="button" class="btn-reset" onclick="handleReset()">Generate</button>
+                <div id="pass-display" class="pass-display-box">
+                    <strong id="new-pass-text"></strong><br>
+                    <span onclick="copyPass()" class="copy-link">Copy & Clear</span>
+                </div>
+                <p class="toggle-text"><span onclick="showSection('login-section')">Back to Login</span></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="dev1.js"></script>
+</body>
+</html>
