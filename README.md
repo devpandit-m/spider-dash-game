@@ -2,8 +2,6 @@
 
 A stylish and interactive 2D web-based game where players must navigate a spider through obstacles. The project features a creative "Lamp-Pull" shutter mechanism for login and registration.
 
-## 🚀 Live Demo
-[Insert your GitHub Pages link here if you host it]
 
 ## ✨ Key Features
 - **Interactive Login Portal:** Pull the lamp cord to reveal the login/signup shutter.
