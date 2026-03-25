@@ -29,5 +29,3 @@ A stylish and interactive 2D web-based game where players must navigate a spider
 2. Open `login.html` in any modern web browser.
 3. Pull the lamp cord to start!
 
-## 📜 License
-This project is open-source and available under the MIT License.
